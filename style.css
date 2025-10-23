@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap'):root {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap')
    
-   :root{  
+:root{  
     --verde-azulado: #219ebcff;
     --laranja: #f5b700ff;
     --rosa: #dc0073ff;
     --azul: #008bf8ff;
     --titulo: "Quicksand", sans-serif;
-    --texto: "Quicksand", sans-serif;}
+    --texto: "Quicksand", sans-serif;
+}
 
 body {
 
@@ -15,8 +16,8 @@ body {
     margin: 0;
     padding-left: 0;
     display: flex;
-    align-content: center;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -41,4 +42,11 @@ button:hover {
     background-color: rgb(21, 182, 231);
     color: var(--laranja);
     transition: 0.8s;
+}
+.passo{
+    font-size: 24px;
+    display:none
+}
+.passo.ativo{
+    display:block
 }
