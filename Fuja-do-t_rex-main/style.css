@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap');
+   
+:root{  
+    --verde-azulado: #219ebcff;
+    --laranja: #f5b700ff;
+    --rosa: #dc0073ff;
+    --azul: #008bf8ff;
+    --titulo: "Quicksand", sans-serif;
+    --texto: "Quicksand", sans-serif;
+}
+
+body {
+
+    background-color: var(--azul);
+    font-family: var(--titulo);
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin-top: 20px;
+    max-width: 90%;
+    text-align: center;
+}
+
+button {
+    font-family: var(--texto);
+    background-color: var(--verde);
+    color: var(--laranja);
+    border: 2px solid var(--rosa);
+    padding: 20px 30px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: rgb(21, 182, 231);
+    color: var(--laranja);
+    transition: 0.8s;
+}
+.passo{
+    font-size: 24px;
+    display:none
+}
+.passo.ativo{
+    display:block
+}
