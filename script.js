@@ -1,39 +1,31 @@
 const botoesProximo = document.querySelectorAll('.btn-proximo');
 const botoesFinalizar = document.querySelectorAll('.finalizar');
-const botoesVoltar = document.querySelectorAll('.btn-voltar');
 const displayResultado = document.getElementById('resultado');
 
-function trocarPasso(proximoId) {
-    // Esconde todos
-    document.querySelectorAll('.passo').forEach(passo => {
-        passo.style.display = 'none';
-    });
-    // Mostra o destino
-    const destino = document.getElementById(proximoId);
-    if (destino) {
-        destino.style.display = 'block';
-    }
-    // Limpa o resultado ao navegar
-    displayResultado.textContent = "";
-}
-
 botoesProximo.forEach(button => {
-    button.addEventListener('click', () => {
-        const proximo = button.getAttribute('data-proximo');
-        trocarPasso(proximo);
+    button.addEventListener('click', function() {
+        // 1. Encontra a seção que está visível agora e a esconde
+        const atual = document.querySelector('.passo.ativo') || document.querySelector('.passo[style*="display: block"]');
+        if (atual) {
+            atual.classList.remove('ativo');
+            atual.style.display = 'none';
+        }
+
+        // 2. Pega o ID do próximo passo e o mostra
+        const proximoId = this.getAttribute('data-proximo');
+        const proximoPasso = document.getElementById(proximoId);
+        
+        if (proximoPasso) {
+            proximoPasso.classList.add('ativo');
+            proximoPasso.style.display = 'block';
+        }
     });
 });
 
-botoesVoltar.forEach(button => {
-    button.addEventListener('click', () => {
-        const anterior = button.getAttribute('data-voltar');
-        trocarPasso(anterior);
-    });
-});
-
+// Lógica para o clique final na cidade
 botoesFinalizar.forEach(button => {
     button.addEventListener('click', function() {
-        displayResultado.textContent = "Boa escolha! Partiu " + this.textContent + "!";
-        displayResultado.style.color = "var(--azul)";
+        displayResultado.textContent = "Boa viagem para " + this.textContent + "!";
+        displayResultado.style.color = "var(--azul)"; 
     });
 });
