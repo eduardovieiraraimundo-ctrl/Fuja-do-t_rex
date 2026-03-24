@@ -9,7 +9,8 @@
     --laranja: #ff6600; 
     --titulo: "Alfa Slab One", serif;
     --texto: "Jockey One", sans-serif;
-}
+}  
+
 
 
 body{
@@ -22,5 +23,6 @@ body{
     margin: 50px;
     min-height: 100vh;
 
-    border-bottom-style: var(--laranja);
+    border-bottom-style: var(--azul-claro);
+
 }
