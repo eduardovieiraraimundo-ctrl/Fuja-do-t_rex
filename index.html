@@ -1,45 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Viagens com Daniel Floriano</title>
-    <link rel="stylesheet" href="stye.css">
-</head>
-<body>
-    <h1>Opções de Viagem</h1>
-    
-    <div class="passo ativo" id="passo-0">
-        <p>Escolha uma região:</p>
-        <button class="btn-proximo" data-proximo="passo-sul">Sul</button>
-        <button class="btn-proximo" data-proximo="passo-sudeste">Sudeste</button>
-    </div>
+<div class="passo" id="passo-sul" style="display: none;">
+    <h3>Você escolheu o Sul. Escolha o Estado:</h3>
+    <button class="btn-proximo" data-proximo="cidade-pr">Paraná</button>
+    <button class="btn-proximo" data-proximo="cidade-rs">Rio Grande do Sul</button>
+    <br><br>
+    <button class="btn-voltar" data-voltar="passo-0">⬅ Voltar</button>
+</div>
 
-    <div class="passo" id="passo-sul" style="display: none;">
-        <h3>Você escolheu o Sul. Escolha o Estado:</h3>
-        <button class="btn-proximo" data-proximo="cidade-curitiba">Paraná</button>
-        <button class="btn-proximo" data-proximo="cidade-poa">Rio Grande do Sul</button>
-    </div>
-
-    <div class="passo" id="passo-sudeste" style="display: none;">
-        <h3>Você escolheu o Sudeste. Escolha o Estado:</h3>
-        <button class="btn-proximo" data-proximo="cidade-sp">São Paulo</button>
-        <button class="btn-proximo" data-proximo="cidade-rj">Rio de Janeiro</button>
-    </div>
-
-    <div class="passo" id="cidade-sp" style="display: none;">
-        <h3>Cidades em São Paulo:</h3>
-        <button class="finalizar">Bertioga</button>
-        <button class="finalizar">Santos</button>
-    </div>
-
-    <div class="passo" id="cidade-rj" style="display: none;">
-        <h3>Cidades no Rio de Janeiro:</h3>
-        <button class="finalizar">Angra dos Reis</button>
-        <button class="finalizar">Copacabana</button>
-    </div>
-
-    <div id="resultado" style="margin-top: 20px; font-size: 24px; font-weight: bold;"></div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="passo" id="cidade-pr" style="display: none;">
+    <h3>Cidades no Paraná:</h3>
+    <button class="finalizar">Curitiba</button>
+    <button class="finalizar">Foz do Iguaçu</button>
+    <br><br>
+    <button class="btn-voltar" data-voltar="passo-sul">⬅ Voltar</button>
+</div>

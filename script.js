@@ -1,31 +1,39 @@
 const botoesProximo = document.querySelectorAll('.btn-proximo');
 const botoesFinalizar = document.querySelectorAll('.finalizar');
+const botoesVoltar = document.querySelectorAll('.btn-voltar');
 const displayResultado = document.getElementById('resultado');
 
-botoesProximo.forEach(button => {
-    button.addEventListener('click', function() {
-        // 1. Esconde todas as seções (passos)
-        const todosOsPassos = document.querySelectorAll('.passo');
-        todosOsPassos.forEach(passo => {
-            passo.style.display = 'none';
-            passo.classList.remove('ativo');
-        });
+function trocarPasso(proximoId) {
+    // Esconde todos
+    document.querySelectorAll('.passo').forEach(passo => {
+        passo.style.display = 'none';
+    });
+    // Mostra o destino
+    const destino = document.getElementById(proximoId);
+    if (destino) {
+        destino.style.display = 'block';
+    }
+    // Limpa o resultado ao navegar
+    displayResultado.textContent = "";
+}
 
-        // 2. Mostra apenas o próximo passo baseado no data-proximo
-        const proximoId = this.getAttribute('data-proximo');
-        const proximoPasso = document.getElementById(proximoId);
-        
-        if (proximoPasso) {
-            proximoPasso.style.display = 'block';
-            proximoPasso.classList.add('ativo');
-        }
+botoesProximo.forEach(button => {
+    button.addEventListener('click', () => {
+        const proximo = button.getAttribute('data-proximo');
+        trocarPasso(proximo);
     });
 });
 
-// Mensagem final ao escolher a cidade
+botoesVoltar.forEach(button => {
+    button.addEventListener('click', () => {
+        const anterior = button.getAttribute('data-voltar');
+        trocarPasso(anterior);
+    });
+});
+
 botoesFinalizar.forEach(button => {
     button.addEventListener('click', function() {
         displayResultado.textContent = "Boa escolha! Partiu " + this.textContent + "!";
-        displayResultado.style.color = "var(--azul)"; // Usa a cor do seu CSS
+        displayResultado.style.color = "var(--azul)";
     });
 });
