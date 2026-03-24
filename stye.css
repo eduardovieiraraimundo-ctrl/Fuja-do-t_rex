@@ -21,4 +21,6 @@ body{
     justify-content: center;
     margin: 50px;
     min-height: 100vh;
+
+    border-bottom-style: var(--laranja);
 }

@@ -16,11 +16,10 @@ document.querySelectorAll('.btn-regiao').forEach(botao => {
     botao.addEventListener('click', () => {
         const regiao = botao.textContent.toLowerCase();
         
-        // Se clicar em Sudeste, mostra os estados
+      
         if (regiao === "sudeste") {
             mostrarEstados();
         } else {
-            // Para outras regiões (exemplo simplificado)
             secaoEstados.style.display = "none";
             secaoCidades.style.display = "none";
             display.textContent = "Em breve teremos opções para " + regiao + "!";
@@ -29,7 +28,7 @@ document.querySelectorAll('.btn-regiao').forEach(botao => {
 });
 
 function mostrarEstados() {
-    listaEstados.innerHTML = ""; // Limpa botões anteriores
+    listaEstados.innerHTML = ""; 
     secaoEstados.style.display = "block";
     secaoCidades.style.display = "none";
     display.textContent = "";
