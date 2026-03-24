@@ -11,11 +11,12 @@ const respostas = {
     "centro-oeste": "A beleza do Pantanal ou a arquitetura de Brasília?"
 };
 
+
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
         const regiao = botao.textContent.toLowerCase();
         display.textContent = respostas[regiao];
         
-        display.style.color = "var(--#1c2541ff";
+        display.style.color = "var( --azul:)";
     });
 });
