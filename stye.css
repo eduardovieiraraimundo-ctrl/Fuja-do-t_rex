@@ -20,5 +20,6 @@ body{
     height: 1px;
     align-items: center;
     justify-content: center;
-    margin: 200px;
+    margin: 50px;
+    min-height: 100vh;
 }
