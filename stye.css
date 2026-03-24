@@ -19,5 +19,6 @@ body{
     text-size-adjust: var(--laranja);
     height: 1px;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
+    margin: width 20px;
 }
