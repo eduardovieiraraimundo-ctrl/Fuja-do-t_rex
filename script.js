@@ -16,6 +16,6 @@ botoes.forEach(botao => {
         const regiao = botao.textContent.toLowerCase();
         display.textContent = respostas[regiao];
         
-        display.style.color = "var(--laranja)";
+        display.style.color = "var(--#1c2541ff";
     });
 });
