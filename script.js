@@ -4,14 +4,14 @@ const displayResultado = document.getElementById('resultado');
 
 botoesProximo.forEach(button => {
     button.addEventListener('click', function() {
-      
+        // 1. Encontra a seção que está visível agora e a esconde
         const atual = document.querySelector('.passo.ativo') || document.querySelector('.passo[style*="display: block"]');
         if (atual) {
             atual.classList.remove('ativo');
             atual.style.display = 'none';
         }
 
-        
+        // 2. Pega o ID do próximo passo e o mostra
         const proximoId = this.getAttribute('data-proximo');
         const proximoPasso = document.getElementById(proximoId);
         
@@ -22,7 +22,7 @@ botoesProximo.forEach(button => {
     });
 });
 
-
+// Lógica para o clique final na cidade
 botoesFinalizar.forEach(button => {
     button.addEventListener('click', function() {
         displayResultado.textContent = "Boa viagem para " + this.textContent + "!";
