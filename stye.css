@@ -12,18 +12,13 @@
 }  
 
 
-
-body{
-    background-color: #5bc0beff;
-    text-align: center;
-    text-decoration-color: #ff6600;
-    text-size-adjust: var(--laranja);
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
-    min-height: 100vh;
-
-    border-bottom-style: var(--azul-claro);
-
-
+.botao {
+  background-color: chocolate;
+  color: rgba(230, 127, 11, 0.568);
+  transition: 0.3s;
 }
+
+.botao:hover {
+  background-color:  rgba(230, 127, 11, 0.568);
+}
+
