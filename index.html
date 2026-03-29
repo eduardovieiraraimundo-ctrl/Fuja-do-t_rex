@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Viagens com Daniel Floriano</title>
     <link rel="stylesheet" href="stye.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 <body>
     <h1>Opções de Viagem</h1>
@@ -16,8 +17,21 @@
 
     <div class="passo" id="passo-sul" style="display: none;">
         <h3>Você escolheu o Sul. Escolha o Estado:</h3>
-        <button class="btn-proximo" data-proximo="cidade-curitiba">Paraná</button>
-        <button class="btn-proximo" data-proximo="cidade-poa">Rio Grande do Sul</button>
+        <button class="btn-proximo" data-proximo="cidades-pr">Paraná</button>
+        <button class="btn-proximo" data-proximo="cidades-rs">Rio Grande do Sul</button>
+       
+    </div>
+
+    <div class="passo" id="cidades-pr" style="display: none;">
+        <h3>Cidades no Paraná:</h3>
+        <button class="finalizar">Foz do Iguaçu</button>
+        <button class="finalizar">Curitiba</button>
+    </div>
+
+    <div class="passo" id="cidades-rs" style="display: none;">
+        <h3>Cidades no Rio Grande do Sul:</h3>
+        <button class="finalizar">Santa Maria</button>
+        <button class="finalizar">Caxias do Sul</button>
     </div>
 
     <div class="passo" id="passo-sudeste" style="display: none;">
