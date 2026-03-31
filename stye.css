@@ -12,3 +12,13 @@
 }  
 
 
+.botao {
+  background-color: chocolate;
+  color: rgba(230, 127, 11, 0.568);
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color:  rgba(230, 127, 11, 0.568);
+}
+
